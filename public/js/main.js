@@ -1,8 +1,8 @@
 require.config({
     paths: {
-        jquery: 'libs/jquery/jquery',
-        underscore: 'libs/underscore/underscore',
-        backbone: 'libs/backbone/backbone',
+        jquery: 'libs/jquery',
+        underscore: 'libs/underscore',
+        backbone: 'libs/backbone',
         baseView: 'app/view/baseView'
     },
     shim:{
@@ -10,7 +10,7 @@ require.config({
 			deps : [ 'underscore','jquery' ],
 			exports : 'Backbone'
 		},
-		underscore: {
+		underscore: {	
 		    exports: "_"
 		}
     },
