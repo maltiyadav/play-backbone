@@ -1,0 +1,13 @@
+@(title: String)(content: Html)
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    </head>
+    <body>
+        @content
+        <script data-main="@routes.Assets.at("js/main")" src="/assets/js/libs/require/require.js"></script>
+    </body>
+</html>
