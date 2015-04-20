@@ -1,8 +1,4 @@
-@(message: String)
-
-@main("Welcome to Play") {
- <div class="container">
-	  <form role="form">
+ <form role="form">
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="name" class="form-control" id="name" placeholder="Enter name">
@@ -15,5 +11,3 @@
    
     <button type="submit" id="submit" class="btn btn-default">Submit</button>
 </form>
-</div>
-}

@@ -15,7 +15,6 @@ libraryDependencies ++= Seq(
 
 libraryDependencies ++= Seq(
   "org.webjars"    %%   "webjars-play"          % "2.3.0-2",
-   "org.webjars"    %    "bootstrap"             % "3.1.1-2",
-   "org.reactivemongo" %% "reactivemongo" % "0.10.5.0.akka23"
+  "org.mongodb" 	%%   "casbah" 				% "2.8.0"
 )
 

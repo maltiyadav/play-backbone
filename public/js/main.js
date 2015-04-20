@@ -12,8 +12,10 @@ require.config({
 		},
 		underscore: {	
 		    exports: "_"
+		},
+		'baseView' : {
+			deps : [ 'backbone']
 		}
     },
 });
-
-define(["jquery", "underscore", "backbone"],function ($, _, Backbone) {});
+require(["jquery", "underscore", "backbone","baseView"],function ($, _, Backbone,BaseView) {});
