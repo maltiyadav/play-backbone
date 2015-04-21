@@ -3,7 +3,7 @@ require.config({
         jquery: 'libs/jquery',
         underscore: 'libs/underscore',
         backbone: 'libs/backbone',
-        baseView: 'app/view/baseView'
+        userView: 'app/view/userView'
     },
     shim:{
     	'backbone' : {
@@ -13,9 +13,9 @@ require.config({
 		underscore: {	
 		    exports: "_"
 		},
-		'baseView' : {
+		'userView' : {
 			deps : [ 'backbone']
 		}
     },
 });
-require(["jquery", "underscore", "backbone","baseView"],function ($, _, Backbone,BaseView) {});
+require(["jquery", "underscore", "backbone","userView"],function ($, _, Backbone,userView) {});
