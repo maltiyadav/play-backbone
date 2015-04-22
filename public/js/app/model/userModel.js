@@ -13,23 +13,21 @@ var userModel = Backbone.Model.extend({
 	        success: function (data) {
 	            console.log(data.toJSON());
 	        }
-		})
+		});
 	},
 	
 	fetchDetails : function(){
 		this.fetch({
 	        success: function (data) {
-	        	console.log(data.toJSON());
+	        	var jsonData = data.toJSON();
+	        	$("#record").empty();
+	        	_.each(jsonData,function(data) {
+	        		var name = JSON.stringify(data.name[0]);
+	        		$("#record").append("<div>"+name.replace(/^"(.*)"$/, '$1')+"</div>");
+	        	});
 	        	
-	        	/*data.each(function(user){
-	        		var obj = jQuery.parseJSON(user);
-	        		var name = obj.name;
-	        		var email = obj.email
-	        		var dat = this({name : name , email : email})
-	        		new userCollection([dat]);
-	        	});*/
-	        }
-	    })
+	       }
+	    });
 	}
 	
 });

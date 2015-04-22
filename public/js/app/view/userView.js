@@ -14,6 +14,7 @@ var userView = Backbone.View.extend({
 	},
 	
 	Submit : function(e){
+		e.preventDefault();
 		var name = $("#name").val();
 		var email = $("#email").val();
 		 var userDetails = {
@@ -22,12 +23,7 @@ var userView = Backbone.View.extend({
 		};
 		 var userModelObj = new userModel(userDetails);
 		 userModelObj.saveDetails(userDetails);
-		 
-		 var result = userModelObj.fetchDetails();
-		 //var obj = new userCollection()
-		 
-		// $("#record").html(obj.model);
-		 
+		 userModelObj.fetchDetails();
 	}
 	
 });

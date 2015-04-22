@@ -5,6 +5,6 @@ var userCollection = Backbone.Collection.extend({
 	
 });
 
-return new userCollection;
+return  userCollection;
 
 });
