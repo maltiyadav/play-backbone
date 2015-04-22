@@ -19,13 +19,7 @@ var userModel = Backbone.Model.extend({
 	fetchDetails : function(){
 		this.fetch({
 	        success: function (data) {
-	        	var jsonData = data.toJSON();
-	        	$("#record").empty();
-	        	_.each(jsonData,function(data) {
-	        		var name = JSON.stringify(data.name[0]);
-	        		$("#record").append("<div>"+name.replace(/^"(.*)"$/, '$1')+"</div>");
-	        	});
-	        	
+	        	console.log(data.toJSON());
 	       }
 	    });
 	}
